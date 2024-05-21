@@ -2,9 +2,12 @@
 <html lang="ja">
 	{{> head}}
 	<body>
-		<div class="flex flex-col ai-c">
-			<h2 class="mb-2 text-1">テキストアニメーション#1</h2>
-		</div>
+		{{> load}}
+		<main>
+			<div class="flex flex-col ai-c">
+				<h2 class="mb-2 text-1">テキストアニメーション#1</h2>
+			</div>
+		</main>
 		<script type="module" src="./js/pages/top/index.js"></script>
 	</body>
 </html>

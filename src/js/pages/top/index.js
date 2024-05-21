@@ -9,3 +9,32 @@ gsap.from(".text-1", {
   ease: "power2.out", // イージング関数で自然な動きを演出
   onComplete: () => console.log("Animation completed!") // アニメーション完了時のコールバック
 });
+
+// load
+const jsLoaderBg = ".js-loader-bg";
+const button = document.querySelector(".button");
+const closeLoadingScreen = (jsLoaderBg) => {
+  gsap.timeline().to(jsLoaderBg, {
+    opacity: 0,
+    direction: 1.1
+  });
+};
+
+const showLoadingScreen = (jsLoaderBg) => {
+  gsap.timeline().to(jsLoaderBg, {
+    opacity: 1
+  });
+};
+// ロード完了したら
+window.onload = () => {
+  setTimeout(() => {
+    closeLoadingScreen(jsLoaderBg);
+  }, 2500);
+};
+
+button.addEventListener("click", () => {
+  showLoadingScreen(jsLoaderBg);
+  setTimeout(() => {
+    closeLoadingScreen(jsLoaderBg);
+  }, 2500);
+});
