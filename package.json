@@ -1,0 +1,46 @@
+{
+	"name": "static-site-boilerplate-vite",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite --host",
+		"build": "vite build --emptyOutDir && prettier --write dist/**/*.html",
+		"preview": "vite preview",
+		"lint": "run-p lint:*",
+		"lint:eslint": "eslint \"src/**/*.js\"",
+		"lint:stylelint": "stylelint \"src/**/*.{css,scss}\"",
+		"lint:prettier": "prettier --check src",
+		"fix": "run-s fix:{eslint,stylelint,prettier}",
+		"fix:eslint": "npm run lint:eslint -- --fix",
+		"fix:stylelint": "npm run lint:stylelint -- --fix",
+		"fix:prettier": "prettier --write src"
+	},
+	"dependencies": {
+		"destyle.css": "^4.0.1",
+		"gsap": "^3.12.5"
+	},
+	"devDependencies": {
+		"@eslint/js": "9.3.0",
+		"eslint": "9.3.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-simple-import-sort": "12.1.0",
+		"globals": "15.3.0",
+		"lefthook": "1.6.12",
+		"npm-run-all2": "6.2.0",
+		"postcss": "8.4.38",
+		"postcss-preset-env": "9.5.13",
+		"postcss-sort-media-queries": "5.2.0",
+		"prettier": "3.2.5",
+		"sass": "1.77.2",
+		"stylelint": "16.5.0",
+		"stylelint-config-recess-order": "5.0.1",
+		"stylelint-config-standard-scss": "13.1.0",
+		"vite": "5.2.11",
+		"vite-plugin-handlebars": "2.0.0",
+		"vite-plugin-imagemin": "0.6.1"
+	},
+	"volta": {
+		"node": "20.13.1"
+	}
+}
