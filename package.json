@@ -18,7 +18,8 @@
 	},
 	"dependencies": {
 		"destyle.css": "^4.0.1",
-		"gsap": "^3.12.5"
+		"gsap": "^3.12.5",
+		"particlesjs": "^2.2.3"
 	},
 	"devDependencies": {
 		"@eslint/js": "9.3.0",

@@ -3,6 +3,9 @@ import "/styles/pages/top/style.scss";
 
 import gsap from "gsap";
 
+import { wave } from "./wave.js";
+import { particle } from "./particle.js";
+
 gsap.from(".text-1", {
   duration: 2, // アニメーションの時間（秒）
   clipPath: "inset(100% 0% 0% 0%)", // 開始時に全て隠れる
@@ -32,9 +35,7 @@ window.onload = () => {
   }, 2500);
 };
 
-button.addEventListener("click", () => {
-  showLoadingScreen(jsLoaderBg);
-  setTimeout(() => {
-    closeLoadingScreen(jsLoaderBg);
-  }, 2500);
+document.addEventListener('DOMContentLoaded', () => {
+  wave();
+  particle();
 });
